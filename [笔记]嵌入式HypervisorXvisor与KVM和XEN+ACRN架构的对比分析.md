@@ -38,7 +38,7 @@
 
 # 2.虚拟化技术分类
 
-![虚拟化分类](https://github.com/qijiuliushisan/images/image-20210104125148828.png)
+![虚拟化分类](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104125148828.png?raw=true)
 
 ## 2.1 Hypervisor设计
 
@@ -68,7 +68,7 @@
 
 ## 3.1 XEN
 
-![XEN架构](https://github.com/qijiuliushisan/images/image-20210104131455362.png)
+![XEN架构](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104131455362.png?raw=true)
 
 特性：**支持全虚拟化、半虚拟化，微内核，轻量级内核**
 
@@ -91,7 +91,7 @@
 
 ## 3.2 KVM
 
-![KVM架构](https://github.com/qijiuliushisan/images/image-20210104133149204.png)
+![KVM架构](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104133149204.png?raw=true)
 
 **特性**：支持**全虚拟化技术**和**半虚拟化技术**的**部分宏内核**Hypervisor，以可选的VirtIO设备形式提供半虚拟化支持。
 
@@ -112,7 +112,7 @@
 
 ## 3.3 **Xvisor**
 
-![image-20210104140952732](https://github.com/qijiuliushisan/images/image-20210104140952732.png)
+![image-20210104140952732](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104140952732.png?raw=true)
 
 **特性**：支持全虚拟化和版虚拟化技术的**完全宏内核**Hypervisor，以**VirtIO设备**的形式**提供半虚拟化支持**。**轻量级**
 
@@ -134,7 +134,7 @@
 
 ## 3.4 ACRN
 
-![ACRN架构](https://github.com/qijiuliushisan/images/image-20210104163121167.png)
+![ACRN架构](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104163121167.png?raw=true)
 
 **特性**：VMXVirtual Machine Extension）是Intel 64和IA-32架构处理器级别的功能，用于支持虚拟化。理论上支持全虚拟化，通过vitio实现半虚拟化。可以看出是**微内核**的Hypervisor。对设备的虚拟化由Hypervisor实现，设备驱动模块在SVM上。
 
@@ -146,7 +146,7 @@
 
 ## 4.1 Xen ARM
 
-![Xen ARM客户机IO事件流](https://github.com/qijiuliushisan/images/image-20210104144715382.png)
+![Xen ARM客户机IO事件流](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104144715382.png?raw=true)
 
 **DomU发起IO：**
 
@@ -160,7 +160,7 @@
 
 ## 4.2 KVM ARM
 
-![KVM ARM的IO事件流](https://github.com/qijiuliushisan/images/image-20210104144852480.png)
+![KVM ARM的IO事件流](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104144852480.png?raw=true)
 
 
 
@@ -175,7 +175,7 @@
 
 ## 4.3 Xvisor ARM
 
-![Xvisor ARM的IO事件流](https://github.com/qijiuliushisan/images/image-20210104145449219.png)
+![Xvisor ARM的IO事件流](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104145449219.png?raw=true)
 
 **客户机发起IO：**
 
@@ -184,7 +184,7 @@
 
 ## 4.4 ACRN
 
-![image-20210104194232822](https://github.com/qijiuliushisan/images/image-20210104194232822.png)
+![image-20210104194232822](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104194232822.png?raw=true)
 
 **SVM的IO流：**ACRN只捕获其对中断设备的访问（红框），其他I / O访问直接进入物理设备（绿框）**。中断设备包括可编程中断控制器（PIC），I / O高级可编程中断控制器（IOAPIC）和本地高级可编程中断控制器（LAPIC）。
 
@@ -198,7 +198,7 @@
 
 ## 5.1 Xen ARM
 
-![Xen ARM的中断处理](https://github.com/qijiuliushisan/images/image-20210104150400563.png)
+![Xen ARM的中断处理](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104150400563.png?raw=true)
 
 **中断处理**：Dom0
 
@@ -213,7 +213,7 @@
 
 ## 5.2 KVM ARM
 
-![KVM ARM的主机中断处理流程](https://github.com/qijiuliushisan/images/image-20210104150929036.png)
+![KVM ARM的主机中断处理流程](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104150929036.png?raw=true)
 
 **流程：**
 
@@ -226,13 +226,13 @@
 
 ## 5.3 Xvisor ARM
 
-![Xvisor ARM主机IRQ的处理](https://github.com/qijiuliushisan/images/image-20210104155243465.png)
+![Xvisor ARM主机IRQ的处理](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104155243465.png?raw=true)
 
 Xvisor的主机设备驱动通常作为Xvisor的一部分以最高权限运行。处理主机中断时是不需要引发调度和上下文切换开销的。只有当主机中断被转发到一个当前没有运行的客户机时，才会引发调度开销。
 
 ## 5.4 ACRN
 
-![image-20210104194825067](https://github.com/qijiuliushisan/images/image-20210104194825067.png)
+![image-20210104194825067](https://github.com/qijiuliushisan/images/blob/mastrer/image-20210104194825067.png?raw=true)
 
 **SVM的IRQ流程**：物理中断由Hypervisor的中断分配器转发给虚拟中断控制器。
 
